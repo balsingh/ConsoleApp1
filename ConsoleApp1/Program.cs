@@ -1,6 +1,6 @@
 ﻿using System;
 using k8s;
-using System.Threading'
+using System.Threading;
 
 namespace ConsoleApp1
 {
