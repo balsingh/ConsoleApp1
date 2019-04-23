@@ -1,5 +1,6 @@
 ﻿using System;
 using k8s;
+using System.Threading'
 
 namespace ConsoleApp1
 {
@@ -12,6 +13,8 @@ namespace ConsoleApp1
             
             IKubernetes client = new Kubernetes(config);
             Console.WriteLine("Starting Request!");
+
+            Thread.Sleep(1200000);
 
             var list = client.ListNamespacedPod("default");
             foreach (var item in list.Items)
