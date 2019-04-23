@@ -14,9 +14,11 @@ namespace ConsoleApp1
             IKubernetes client = new Kubernetes(config);
             Console.WriteLine("Starting Request!");
 
-            Thread.Sleep(1200000);
+            // Thread.Sleep(1200000);
 
-            var list = client.ListNamespacedPod("default");
+            
+            var list = client.ListNamespacedPod("payments");
+            Console.WriteLine("listname");
             foreach (var item in list.Items)
             {
                 Console.WriteLine(item.Metadata.Name);
